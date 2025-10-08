@@ -42,6 +42,22 @@ Secondary: Wholesale clients (restaurants, offices) and online shoppers.
 #### Project Initiation
 - **Organization Selection:** Chose UrbanBrew Coffee Roasters as target organization
 - **Requirements Analysis:** Documented project requirements and specifications
+
+- ## References
+
+### Academic and Industry Sources
+FontAwesome (2025) *Font Awesome Icons*. Available at: https://fontawesome.com/ (Accessed: 19 September 2025).
+
+Google Fonts (2025) *Playfair Display and Open Sans Fonts*. Available at: https://fonts.google.com/ (Accessed: 19 September 2025).
+
+Unsplash (2025) *Free High-Resolution Images*. Available at: https://unsplash.com/ (Accessed: 19 September 2025).
+
+Specialty Coffee Association (2024) *Coffee Brewing Standards*. Available at: https://sca.coffee/ (Accessed: 19 September 2025).
+
+### Technical References
+Mozilla Developer Network (2025) *HTML, CSS and JavaScript Documentation*. Available at: https://developer.mozilla.org/ (Accessed: 10 September 2025).
+
+World Wide Web Consortium (2024) *Web Content Accessibility Guidelines (WCAG) 2.1*. Available at: https://www.w3.org/WAI/standards-guidelines/wcag/ (Accessed: 19 September 2025).
 - **Initial Research:** Conducted market and competitor analysis
 - **Project Scope:** Defined website goals and objectives
 
