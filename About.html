@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Story | UrbanBrew Coffee Roasters</title>
     <link rel="stylesheet" href="CSS/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="js/script.js"></script>
     
 </head>
@@ -13,14 +15,39 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="images/logo design for Urba.png" weight="100" height="100" alt="UrbanBrew Coffee Roasters">
+                <img src="images/logo design for Urba.png" width="100" height="100" alt="UrbanBrew Coffee Roasters">
             </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Our Story</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="enquiry.html">Workshops</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="Contacts.html">Contact</a></li>
+                <li class="cart-item"><a href="#" class="cart-icon">
+                    🛒<span class="cart-count">0</span></a>
+                    <div class="cart-dropdown">
+                        <div class="cart-header">
+                            <h4>Your Cart</h4>
+                            <button class="close-cart">&times;</button>
+                        </div>
+                        <div class="cart-items">
+                            <div class="empty-cart">
+                                <div class="empty-icon">🛒</div>
+                                <p>Your cart is empty</p>
+                                <a href="products.html" class="btn-secondary">Browse Products</a>
+                            </div>
+                        </div>
+                        <div class="cart-footer">
+                            <div class="cart-total">
+                                <span>Total:</span>
+                                <span class="total-amount">R0.00</span>
+                            </div>
+                            <button class="btn-primary checkout-btn">Proceed to Checkout</button>
+                            <button class="btn-secondary view-cart-btn">View Full Cart</button>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -30,18 +57,18 @@
             <h1>Our Story</h1>
         </section>
         
-        <section class="history">
+        <section class="history container">
             <h2>How It All Began</h2>
-            <p>UrbanBrew Coffee Roasters was founded in 2023 by two coffee enthusiasts who wanted to bring specialty coffee to Johannesburg...</p>
+            <p>UrbanBrew Coffee Roasters was founded in 2023 by two coffee enthusiasts who wanted to bring specialty coffee to Johannesburg. After years of traveling through coffee-growing regions in Ethiopia, Colombia, and Brazil, they returned with a mission to create exceptional coffee experiences for their community.</p>
         </section>
         
-        <section class="mission">
+        <section class="mission container">
             <h2>Our Mission</h2>
-            <p>To provide high-quality, sustainably sourced coffee while educating our community about brewing techniques and coffee culture.</p>
+            <p>To provide high-quality, sustainably sourced coffee while educating our community about brewing techniques and coffee culture. We believe that great coffee should be accessible to everyone, and that each cup tells a story of the people and places that made it possible.</p>
         </section>
-<br>
-        <section class="team">
-            <h2>Meet Our Team</h2>
+
+        <section class="team container">
+            <h2 class="section-title">Meet Our Team</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
@@ -53,63 +80,61 @@
                         <p class="member-desc">James brings 15 years of expertise in perfecting roast profiles for each unique coffee bean origin.</p>
                     </div>
                 </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Head Barista">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Sarah Chen</h3>
+                        <div class="member-role">Head Barista</div>
+                        <p class="member-desc">Sarah is a national latte art champion with a passion for creating the perfect coffee experience.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Green Coffee Buyer">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Michael Rodriguez</h3>
+                        <div class="member-role">Green Coffee Buyer</div>
+                        <p class="member-desc">Michael travels worldwide to source the finest ethically grown coffee beans for our roastery.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1580483046931-aaba29b81601?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Café Manager">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Emily Watson</h3>
+                        <div class="member-role">Café Manager</div>
+                        <p class="member-desc">Emily ensures our café provides a warm, welcoming environment and exceptional customer service.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Education Director">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">David Kim</h3>
+                        <div class="member-role">Education Director</div>
+                        <p class="member-desc">David leads our workshops and training programs, sharing coffee knowledge with enthusiasts.</p>
+                    </div>
+                </div>
             </div>
-<br>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Head Barista">
-                </div>
-                <div class="member-info">
-                    <h3 class="member-name">Sarah Chen</h3>
-                    <div class="member-role">Head Barista</div>
-                    <p class="member-desc">Sarah is a national latte art champion with a passion for creating the perfect coffee experience.</p>
-                </div>
-            </div>
-<br>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Green Coffee Buyer">
-                </div>
-                <div class="member-info">
-                    <h3 class="member-name">Michael Rodriguez</h3>
-                    <div class="member-role">Green Coffee Buyer</div>
-                    <p class="member-desc">Michael travels worldwide to source the finest ethically grown coffee beans for our roastery.</p>
-                </div>
-            </div>
-<br>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="https://images.unsplash.com/photo-1580483046931-aaba29b81601?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Café Manager">
-                </div>
-                <div class="member-info">
-                    <h3 class="member-name">Emily Watson</h3>
-                    <div class="member-role">Café Manager</div>
-                    <p class="member-desc">Emily ensures our café provides a warm, welcoming environment and exceptional customer service.</p>
-                </div>
-            </div>
-<br>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Education Director">
-                </div>
-                <div class="member-info">
-                    <h3 class="member-name">David Kim</h3>
-                    <div class="member-role">Education Director</div>
-                    <p class="member-desc">David leads our workshops and training programs, sharing coffee knowledge with enthusiasts.</p>
-                </div>
-            </div>
-        </div>
-<br>
+
             <div class="team-quote">
-            <p>"Our team is united by a shared passion for coffee excellence, sustainability, and creating memorable experiences for our customers."</p>
-            <div class="author">— The UrbanBrew Team</div>
+                <p>"Our team is united by a shared passion for coffee excellence, sustainability, and creating memorable experiences for our customers."</p>
+                <div class="author">— The UrbanBrew Team</div>
             </div>
-            
         </section>
         
-        <section class="sourcing">
+        <section class="sourcing container">
             <h2>Ethical Sourcing</h2>
-            <p>We work directly with farmers who practice sustainable agriculture and ensure fair wages for workers...</p>
+            <p>We work directly with farmers who practice sustainable agriculture and ensure fair wages for workers. Our commitment to ethical sourcing means that every bag of UrbanBrew coffee supports the communities that grow our beans, creating a positive impact from farm to cup.</p>
         </section>
     </main>
 
@@ -133,10 +158,9 @@
                     <a href="https://facebook.com" target="_blank" class="fab fa-facebook-f"> <img src="images/eyestetix-studio-LPryCyk1PdE-unsplash.jpg" height="100" weight="100" alt="Facebook"></a>
                     <a href="https://instagram.com" target="_blank" class="fab fa-instagram"> <img src="images/alexander-shatov-_tF3vug2FhQ-unsplash.jpg" height="100" weight="100" alt="Instagram"></a>
                     <a href="https://twitter.com" target="_blank" class="fab fa-twitter"> <img src="images/alexander-shatov-k1xf2D7jWUs-unsplash.jpg" height="100" weight="100" alt="Twitter"></a>
-                    <a href="https://pinterest.com" target="_blank" class="fab fa-pinterest"> <img src="images/abid-shah-6wudoH3GlJQ-unsplash.jpg" height="100" weight="100" alt="Pinterest"></a>
-                </div>
             </div>
         </div>
+
         <div class="copyright">
             <p>&copy; ST10247518, 2025 UrbanBrew Coffee Roasters. All rights reserved.</p>
         </div>
