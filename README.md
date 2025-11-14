@@ -13,6 +13,21 @@ Secondary: Wholesale clients (restaurants, offices) and online shoppers.
 
 ## Changelog
 
+### [Version 2.0] - November 14, 2025
+#### Improvements and Refinements
+- Javascript - Added javascript for a fully functional website
+- Cart Functionality
+- CSS: Fixed syntax errors and missing styles, Added proper image paths, Improved responsive design, Added cart dropdown styles
+- HTML: Fixed file paths, Added proper closing tags, Improved semantic structure, Added missing container elements
+- Scrollable Gallery - Smooth scrolling with infinite images
+- Category Filters - Filter by Coffee, Café, Workshops, Team
+- Lightbox View - Click images for full-screen view
+- Responsive Design - Works on all devices
+- Smooth Animations - Fade-in and hover effects
+- Keyboard Navigation - Arrow keys and ESC for lightbox
+- Mobile Friendly - Touch-friendly interface
+- SEO Optimized - Proper alt tags and semantic HTML 
+
 ### [Version 1.3] - September 26, 2025
 #### Improvements and Refinements
 - **Content Research and Sourcing:** Added comprehensive content research and sourcing section to the Project Proposal
