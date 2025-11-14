@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | UrbanBrew Coffee Roasters</title>
+    <link rel="stylesheet" href="CSS/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo design for Urba.png" width="100" height="100" alt="UrbanBrew Coffee Roasters">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Our Story</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="enquiry.html">Workshops</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="Contacts.html">Contact</a></li>
+                <li class="cart-item">
+                    <a href="#" class="cart-icon">
+                        🛒<span class="cart-count">0</span>
+                    </a>
+                    <div class="cart-dropdown">
+                        <div class="cart-header">
+                            <h4>Your Cart</h4>
+                            <button class="close-cart">&times;</button>
+                        </div>
+                        <div class="cart-items">
+                            <div class="empty-cart">
+                                <div class="empty-icon">🛒</div>
+                                <p>Your cart is empty</p>
+                                <a href="products.html" class="btn-secondary">Browse Products</a>
+                            </div>
+                        </div>
+                        <div class="cart-footer">
+                            <div class="cart-total">
+                                <span>Total:</span>
+                                <span class="total-amount">R0.00</span>
+                            </div>
+                            <button class="btn-primary checkout-btn">Proceed to Checkout</button>
+                            <button class="btn-secondary view-cart-btn">View Full Cart</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Our Gallery</h1>
+            <p>Experience the art of coffee through our lens</p>
+        </section>
+
+        <!-- Gallery Navigation -->
+        <section class="gallery-nav container">
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="coffee">Coffee</button>
+                <button class="filter-btn" data-filter="cafe">Our Café</button>
+                <button class="filter-btn" data-filter="workshops">Workshops</button>
+                <button class="filter-btn" data-filter="team">Our Team</button>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <!-- Coffee Images -->
+                <div class="gallery-item" data-category="coffee">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Espresso Art" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Espresso Art</h3>
+                        <p>Perfectly crafted latte art by our skilled baristas</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="coffee">
+                    <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Coffee Beans" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Premium Beans</h3>
+                        <p>Freshly roasted coffee beans from around the world</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="coffee">
+                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Brewing Process" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Brewing Process</h3>
+                        <p>Precision brewing for the perfect cup</p>
+                    </div>
+                </div>
+
+                <!-- Café Images -->
+                <div class="gallery-item" data-category="cafe">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Café Interior" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Our Space</h3>
+                        <p>Warm and inviting café atmosphere</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="cafe">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Coffee Bar" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Coffee Bar</h3>
+                        <p>Our state-of-the-art brewing station</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="cafe">
+                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Café Seating" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Comfortable Seating</h3>
+                        <p>Relax and enjoy your coffee in comfort</p>
+                    </div>
+                </div>
+
+                <!-- Workshop Images -->
+                <div class="gallery-item" data-category="workshops">
+                    <img src="https://images.unsplash.com/photo-1561986863-60b73438b5c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Coffee Tasting" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Coffee Tasting</h3>
+                        <p>Discover new flavors in our tasting sessions</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="workshops">
+                    <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Roasting Workshop" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Roasting Workshop</h3>
+                        <p>Learn the art of coffee roasting</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="workshops">
+                    <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Brewing Class" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Brewing Masterclass</h3>
+                        <p>Hands-on brewing techniques</p>
+                    </div>
+                </div>
+
+                <!-- Team Images -->
+                <div class="gallery-item" data-category="team">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Head Roaster" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>James Wilson</h3>
+                        <p>Head Roaster - 15 years of expertise</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="team">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Head Barista" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Sarah Chen</h3>
+                        <p>Head Barista - Latte Art Champion</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="team">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Coffee Buyer" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Michael Rodriguez</h3>
+                        <p>Green Coffee Buyer</p>
+                    </div>
+                </div>
+
+                <!-- Additional Images -->
+                <div class="gallery-item" data-category="coffee">
+                    <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Coffee Preparation" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Morning Ritual</h3>
+                        <p>Starting the day with perfect coffee</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="cafe">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Café Atmosphere" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Relaxing Atmosphere</h3>
+                        <p>The perfect spot to unwind</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="workshops">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="Group Workshop" 
+                         class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Group Learning</h3>
+                        <p>Interactive workshop sessions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <span class="lightbox-prev">&#10094;</span>
+            <span class="lightbox-next">&#10095;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-image" src="" alt="">
+                <div class="lightbox-caption">
+                    <h3 id="lightbox-title"></h3>
+                    <p id="lightbox-description"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>UrbanBrew Coffee Roasters</h3>
+                    <p>123 Coffee Street, Braamfontein</p>
+                    <p>Johannesburg, 2001</p>
+                    <p>South Africa</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Hours</h3>
+                    <p>Monday-Friday: 7am-6pm</p>
+                    <p>Saturday-Sunday: 8am-4pm</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <p>Phone: +27 11 123 4567</p>
+                    <p>Email: info@urbanbrew.co.za</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank">Facebook</a>
+                        <a href="https://instagram.com" target="_blank">Instagram</a>
+                        <a href="https://twitter.com" target="_blank">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; ST10247518, 2025 UrbanBrew Coffee Roasters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
