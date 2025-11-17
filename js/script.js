@@ -619,3 +619,218 @@ document.addEventListener('DOMContentLoaded', function() {
     // Call preload function when page loads
     preloadGalleryImages();
 });
+
+// Workshop booking functionality for enquiry.html
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all "Book Now" buttons
+            const bookNowButtons = document.querySelectorAll('.book-now-btn');
+            
+            // Add click event listeners to each button
+            bookNowButtons.forEach((button, index) => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get workshop details from the card
+                    const workshopCard = this.closest('.workshop-card');
+                    const workshopTitle = workshopCard.querySelector('.workshop-title').textContent;
+                    const workshopPrice = workshopCard.querySelector('.workshop-price').textContent;
+                    const workshopDetails = workshopCard.querySelector('.workshop-desc').textContent;
+                    
+                    // Create booking form
+                    createBookingForm(workshopTitle, workshopPrice, workshopDetails);
+                });
+            });
+            
+            // Function to create and display booking form
+            function createBookingForm(title, price, description) {
+                // Create modal overlay
+                const modalOverlay = document.createElement('div');
+                modalOverlay.className = 'modal-overlay';
+                
+                // Create modal content
+                const modalContent = document.createElement('div');
+                modalContent.className = 'booking-modal';
+                
+                // Modal HTML content
+                modalContent.innerHTML = `
+                    <div class="modal-header">
+                        <h2 style="color: #8B4513; margin-bottom: 0.5rem;">Book Workshop</h2>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    
+                    <div class="workshop-info">
+                        <h3 style="color: #8B4513; margin-bottom: 0.5rem;">${title}</h3>
+                        <p style="color: #666; margin-bottom: 0.5rem;">${description}</p>
+                        <div style="font-weight: bold; color: #8B4513;">${price}</div>
+                    </div>
+                    
+                    <form id="booking-form" class="booking-form">
+                        <div class="form-group">
+                            <label for="booking-name">Full Name *</label>
+                            <input type="text" id="booking-name" name="booking-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-email">Email Address *</label>
+                            <input type="email" id="booking-email" name="booking-email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-phone">Phone Number *</label>
+                            <input type="tel" id="booking-phone" name="booking-phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-date">Preferred Date *</label>
+                            <input type="date" id="booking-date" name="booking-date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-participants">Number of Participants *</label>
+                            <select id="booking-participants" name="booking-participants" required>
+                                <option value="">Select number</option>
+                                <option value="1">1 Participant</option>
+                                <option value="2">2 Participants</option>
+                                <option value="3">3 Participants</option>
+                                <option value="4">4 Participants</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-notes">Additional Notes</label>
+                            <textarea id="booking-notes" name="booking-notes" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="confirm-booking">Confirm Booking</button>
+                            <button type="button" class="cancel-booking">Cancel</button>
+                        </div>
+                    </form>
+                `;
+                
+                // Append modal to overlay and overlay to body
+                modalOverlay.appendChild(modalContent);
+                document.body.appendChild(modalOverlay);
+                
+                // Set minimum date to today
+                const dateInput = modalContent.querySelector('#booking-date');
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.min = today;
+                
+                // Close modal functionality
+                const closeModal = modalContent.querySelector('.close-modal');
+                const cancelBtn = modalContent.querySelector('.cancel-booking');
+                
+                const closeModalFunction = () => {
+                    document.body.removeChild(modalOverlay);
+                };
+                
+                closeModal.addEventListener('click', closeModalFunction);
+                cancelBtn.addEventListener('click', closeModalFunction);
+                modalOverlay.addEventListener('click', (e) => {
+                    if (e.target === modalOverlay) {
+                        closeModalFunction();
+                    }
+                });
+                
+                // Form submission
+                const bookingForm = modalContent.querySelector('#booking-form');
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = {
+                        workshop: title,
+                        name: document.getElementById('booking-name').value,
+                        email: document.getElementById('booking-email').value,
+                        phone: document.getElementById('booking-phone').value,
+                        date: document.getElementById('booking-date').value,
+                        participants: document.getElementById('booking-participants').value,
+                        notes: document.getElementById('booking-notes').value,
+                        timestamp: new Date().toISOString()
+                    };
+                    
+                    // Validate form
+                    if (validateBookingForm(formData)) {
+                        // Process booking
+                        processBooking(formData);
+                        
+                        // Close modal
+                        closeModalFunction();
+                    }
+                });
+            }
+            
+            // Form validation function
+            function validateBookingForm(formData) {
+                if (!formData.name.trim()) {
+                    alert('Please enter your full name.');
+                    return false;
+                }
+                
+                if (!formData.email.trim() || !isValidEmail(formData.email)) {
+                    alert('Please enter a valid email address.');
+                    return false;
+                }
+                
+                if (!formData.phone.trim()) {
+                    alert('Please enter your phone number.');
+                    return false;
+                }
+                
+                if (!formData.date) {
+                    alert('Please select a preferred date.');
+                    return false;
+                }
+                
+                if (!formData.participants) {
+                    alert('Please select the number of participants.');
+                    return false;
+                }
+                
+                return true;
+            }
+            
+            // Email validation helper function
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // Process booking function
+            function processBooking(bookingData) {
+                // Here you would typically send the data to your backend
+                // For now, we'll just show a success message and log the data
+                
+                console.log('Booking submitted:', bookingData);
+                
+                // Show success message
+                alert(`Thank you for booking "${bookingData.workshop}"!\n\nWe have received your booking request for ${bookingData.participants} participant(s) on ${formatDate(bookingData.date)}. We will contact you at ${bookingData.email} to confirm your booking.\n\nBooking Reference: UB${Date.now().toString().slice(-6)}`);
+                
+                // You can add AJAX call here to send data to your server
+                /*
+                fetch('/api/bookings', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(bookingData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Booking successful:', data);
+                    alert('Booking confirmed! Check your email for details.');
+                })
+                .catch(error => {
+                    console.error('Booking error:', error);
+                    alert('There was an error processing your booking. Please try again.');
+                });
+                */
+            }
+            
+            // Date formatting helper function
+            function formatDate(dateString) {
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                return new Date(dateString).toLocaleDateString(undefined, options);
+            }
+        });
