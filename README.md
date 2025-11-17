@@ -13,7 +13,7 @@ Secondary: Wholesale clients (restaurants, offices) and online shoppers.
 
 ## Changelog
 
-### [Version 2.0] - November 14, 2025
+### [Version 2.0] - November 17, 2025
 #### Improvements and Refinements
 - Javascript - Added javascript for a fully functional website
 - Cart Functionality
@@ -26,7 +26,16 @@ Secondary: Wholesale clients (restaurants, offices) and online shoppers.
 - Smooth Animations - Fade-in and hover effects
 - Keyboard Navigation - Arrow keys and ESC for lightbox
 - Mobile Friendly - Touch-friendly interface
-- SEO Optimized - Proper alt tags and semantic HTML 
+- SEO Optimized - Proper alt tags and semantic HTML
+- Updated Button Class: Changed all "Book Now" buttons to use the class book-now-btn for easier JavaScript targeting.
+- Included comprehensive CSS for the booking modal with a coffee-themed design that matches your website's aesthetic.
+- Added the complete booking functionality directly in the HTML file with: 
+Modal creation and display
+Form validation
+Date restrictions (can't book in the past)
+Success feedback with booking reference
+Professional styling
+
 
 ### [Version 1.3] - September 26, 2025
 #### Improvements and Refinements
